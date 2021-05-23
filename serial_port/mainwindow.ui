@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QTextEdit" name="textEdit">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>20</y>
+      <width>771</width>
+      <height>301</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QTextEdit" name="textEdit_2">
+    <property name="geometry">
+     <rect>
+      <x>370</x>
+      <y>340</y>
+      <width>411</width>
+      <height>201</height>
+     </rect>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="serialReceivegroupBox">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>330</y>
+      <width>171</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>接收区</string>
+    </property>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>30</y>
+       <width>154</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_3">
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout_2">
+          <item>
+           <widget class="QLabel" name="serialPortNamelabel">
+            <property name="text">
+             <string>端口号</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="serialBaudratelabel">
+            <property name="text">
+             <string>波特率</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item>
+         <layout class="QVBoxLayout" name="verticalLayout">
+          <item>
+           <widget class="QComboBox" name="serialPortNamecomboBox"/>
+          </item>
+          <item>
+           <widget class="QComboBox" name="serialBaudratecomboBox"/>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QCheckBox" name="serialHexDisplaycheckBox">
+          <property name="text">
+           <string>HEX</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="serialCleanReceivepushButton">
+          <property name="text">
+           <string>清除窗口</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_2">
+        <item>
+         <widget class="QRadioButton" name="radioButton">
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="serialOnClickpushButton">
+          <property name="text">
+           <string>打开串口</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QGroupBox" name="serialSendgroupBox">
+    <property name="geometry">
+     <rect>
+      <x>199</x>
+      <y>329</y>
+      <width>141</width>
+      <height>211</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>发射区</string>
+    </property>
+    <widget class="QWidget" name="">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>30</y>
+       <width>95</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QCheckBox" name="serialHexSendcheckBox">
+        <property name="text">
+         <string>HEX</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="serialCleanSendpushButton">
+        <property name="text">
+         <string>清除窗口</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="serialSendpushButton">
+        <property name="text">
+         <string>发送</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>26</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
