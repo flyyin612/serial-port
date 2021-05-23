@@ -31,10 +31,10 @@ class Ui_MainWindow
 {
 public:
     QWidget *centralwidget;
-    QTextEdit *textEdit;
-    QTextEdit *textEdit_2;
+    QTextEdit *serialReceivetextEdit;
+    QTextEdit *serialSendtextEdit;
     QGroupBox *serialReceivegroupBox;
-    QWidget *widget;
+    QWidget *layoutWidget;
     QVBoxLayout *verticalLayout_4;
     QHBoxLayout *horizontalLayout_3;
     QVBoxLayout *verticalLayout_2;
@@ -47,10 +47,10 @@ public:
     QCheckBox *serialHexDisplaycheckBox;
     QPushButton *serialCleanReceivepushButton;
     QHBoxLayout *horizontalLayout_2;
-    QRadioButton *radioButton;
+    QRadioButton *serialOpenradioButton;
     QPushButton *serialOnClickpushButton;
     QGroupBox *serialSendgroupBox;
-    QWidget *widget1;
+    QWidget *layoutWidget1;
     QVBoxLayout *verticalLayout_3;
     QCheckBox *serialHexSendcheckBox;
     QPushButton *serialCleanSendpushButton;
@@ -65,31 +65,31 @@ public:
         MainWindow->resize(800, 600);
         centralwidget = new QWidget(MainWindow);
         centralwidget->setObjectName(QString::fromUtf8("centralwidget"));
-        textEdit = new QTextEdit(centralwidget);
-        textEdit->setObjectName(QString::fromUtf8("textEdit"));
-        textEdit->setGeometry(QRect(10, 20, 771, 301));
-        textEdit_2 = new QTextEdit(centralwidget);
-        textEdit_2->setObjectName(QString::fromUtf8("textEdit_2"));
-        textEdit_2->setGeometry(QRect(370, 340, 411, 201));
+        serialReceivetextEdit = new QTextEdit(centralwidget);
+        serialReceivetextEdit->setObjectName(QString::fromUtf8("serialReceivetextEdit"));
+        serialReceivetextEdit->setGeometry(QRect(10, 20, 771, 301));
+        serialSendtextEdit = new QTextEdit(centralwidget);
+        serialSendtextEdit->setObjectName(QString::fromUtf8("serialSendtextEdit"));
+        serialSendtextEdit->setGeometry(QRect(370, 340, 411, 201));
         serialReceivegroupBox = new QGroupBox(centralwidget);
         serialReceivegroupBox->setObjectName(QString::fromUtf8("serialReceivegroupBox"));
         serialReceivegroupBox->setGeometry(QRect(20, 330, 171, 211));
-        widget = new QWidget(serialReceivegroupBox);
-        widget->setObjectName(QString::fromUtf8("widget"));
-        widget->setGeometry(QRect(10, 30, 154, 161));
-        verticalLayout_4 = new QVBoxLayout(widget);
+        layoutWidget = new QWidget(serialReceivegroupBox);
+        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
+        layoutWidget->setGeometry(QRect(10, 30, 154, 161));
+        verticalLayout_4 = new QVBoxLayout(layoutWidget);
         verticalLayout_4->setObjectName(QString::fromUtf8("verticalLayout_4"));
         verticalLayout_4->setContentsMargins(0, 0, 0, 0);
         horizontalLayout_3 = new QHBoxLayout();
         horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        serialPortNamelabel = new QLabel(widget);
+        serialPortNamelabel = new QLabel(layoutWidget);
         serialPortNamelabel->setObjectName(QString::fromUtf8("serialPortNamelabel"));
 
         verticalLayout_2->addWidget(serialPortNamelabel);
 
-        serialBaudratelabel = new QLabel(widget);
+        serialBaudratelabel = new QLabel(layoutWidget);
         serialBaudratelabel->setObjectName(QString::fromUtf8("serialBaudratelabel"));
 
         verticalLayout_2->addWidget(serialBaudratelabel);
@@ -99,12 +99,12 @@ public:
 
         verticalLayout = new QVBoxLayout();
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        serialPortNamecomboBox = new QComboBox(widget);
+        serialPortNamecomboBox = new QComboBox(layoutWidget);
         serialPortNamecomboBox->setObjectName(QString::fromUtf8("serialPortNamecomboBox"));
 
         verticalLayout->addWidget(serialPortNamecomboBox);
 
-        serialBaudratecomboBox = new QComboBox(widget);
+        serialBaudratecomboBox = new QComboBox(layoutWidget);
         serialBaudratecomboBox->setObjectName(QString::fromUtf8("serialBaudratecomboBox"));
 
         verticalLayout->addWidget(serialBaudratecomboBox);
@@ -117,12 +117,12 @@ public:
 
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        serialHexDisplaycheckBox = new QCheckBox(widget);
+        serialHexDisplaycheckBox = new QCheckBox(layoutWidget);
         serialHexDisplaycheckBox->setObjectName(QString::fromUtf8("serialHexDisplaycheckBox"));
 
         horizontalLayout->addWidget(serialHexDisplaycheckBox);
 
-        serialCleanReceivepushButton = new QPushButton(widget);
+        serialCleanReceivepushButton = new QPushButton(layoutWidget);
         serialCleanReceivepushButton->setObjectName(QString::fromUtf8("serialCleanReceivepushButton"));
 
         horizontalLayout->addWidget(serialCleanReceivepushButton);
@@ -132,12 +132,12 @@ public:
 
         horizontalLayout_2 = new QHBoxLayout();
         horizontalLayout_2->setObjectName(QString::fromUtf8("horizontalLayout_2"));
-        radioButton = new QRadioButton(widget);
-        radioButton->setObjectName(QString::fromUtf8("radioButton"));
+        serialOpenradioButton = new QRadioButton(layoutWidget);
+        serialOpenradioButton->setObjectName(QString::fromUtf8("serialOpenradioButton"));
 
-        horizontalLayout_2->addWidget(radioButton);
+        horizontalLayout_2->addWidget(serialOpenradioButton);
 
-        serialOnClickpushButton = new QPushButton(widget);
+        serialOnClickpushButton = new QPushButton(layoutWidget);
         serialOnClickpushButton->setObjectName(QString::fromUtf8("serialOnClickpushButton"));
 
         horizontalLayout_2->addWidget(serialOnClickpushButton);
@@ -148,23 +148,23 @@ public:
         serialSendgroupBox = new QGroupBox(centralwidget);
         serialSendgroupBox->setObjectName(QString::fromUtf8("serialSendgroupBox"));
         serialSendgroupBox->setGeometry(QRect(199, 329, 141, 211));
-        widget1 = new QWidget(serialSendgroupBox);
-        widget1->setObjectName(QString::fromUtf8("widget1"));
-        widget1->setGeometry(QRect(30, 30, 95, 161));
-        verticalLayout_3 = new QVBoxLayout(widget1);
+        layoutWidget1 = new QWidget(serialSendgroupBox);
+        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
+        layoutWidget1->setGeometry(QRect(30, 30, 95, 161));
+        verticalLayout_3 = new QVBoxLayout(layoutWidget1);
         verticalLayout_3->setObjectName(QString::fromUtf8("verticalLayout_3"));
         verticalLayout_3->setContentsMargins(0, 0, 0, 0);
-        serialHexSendcheckBox = new QCheckBox(widget1);
+        serialHexSendcheckBox = new QCheckBox(layoutWidget1);
         serialHexSendcheckBox->setObjectName(QString::fromUtf8("serialHexSendcheckBox"));
 
         verticalLayout_3->addWidget(serialHexSendcheckBox);
 
-        serialCleanSendpushButton = new QPushButton(widget1);
+        serialCleanSendpushButton = new QPushButton(layoutWidget1);
         serialCleanSendpushButton->setObjectName(QString::fromUtf8("serialCleanSendpushButton"));
 
         verticalLayout_3->addWidget(serialCleanSendpushButton);
 
-        serialSendpushButton = new QPushButton(widget1);
+        serialSendpushButton = new QPushButton(layoutWidget1);
         serialSendpushButton->setObjectName(QString::fromUtf8("serialSendpushButton"));
 
         verticalLayout_3->addWidget(serialSendpushButton);
@@ -191,7 +191,7 @@ public:
         serialBaudratelabel->setText(QCoreApplication::translate("MainWindow", "\346\263\242\347\211\271\347\216\207", nullptr));
         serialHexDisplaycheckBox->setText(QCoreApplication::translate("MainWindow", "HEX", nullptr));
         serialCleanReceivepushButton->setText(QCoreApplication::translate("MainWindow", "\346\270\205\351\231\244\347\252\227\345\217\243", nullptr));
-        radioButton->setText(QString());
+        serialOpenradioButton->setText(QString());
         serialOnClickpushButton->setText(QCoreApplication::translate("MainWindow", "\346\211\223\345\274\200\344\270\262\345\217\243", nullptr));
         serialSendgroupBox->setTitle(QCoreApplication::translate("MainWindow", "\345\217\221\345\260\204\345\214\272", nullptr));
         serialHexSendcheckBox->setText(QCoreApplication::translate("MainWindow", "HEX", nullptr));

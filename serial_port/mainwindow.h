@@ -17,7 +17,16 @@ public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
 
+private slots:
+    void onClickedButtun();
+    void readData();
+    void clearReceiveWindow();
+    void on_sendButtun_clicked();
+    void clearSendWindow();
+
 private:
     Ui::MainWindow *ui;
+    QSerialPort *m_serial = nullptr;
+
 };
 #endif // MAINWINDOW_H
